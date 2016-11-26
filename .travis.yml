@@ -16,5 +16,7 @@ install:
   - go get -u -v github.com/cweill/gotests/...
   - go get -u -t github.com/onsi/ginkgo
   - go get -u -t github.com/onsi/gomega
+  - go get github.com/golang/mock/gomock
+  - go get github.com/golang/mock/mockgen
 script:
-  - go test
+  - cd sort && go test && cd ..
