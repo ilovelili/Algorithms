@@ -5,7 +5,7 @@ import (
 )
 
 // BubbleSort implements bubble sort algorithm
-func (sort *sorter) BubbleSort(arrayzor []algorithmutil.IComparable) []algorithmutil.IComparable {
+func (sort *Sorter) BubbleSort(arrayzor []algorithmutil.IComparable) []algorithmutil.IComparable {
 	swapped := true
 
 	for swapped {

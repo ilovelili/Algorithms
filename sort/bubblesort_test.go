@@ -8,7 +8,7 @@ import (
 )
 
 var _ = Describe("bubble sort", func() {
-	var sorter *sorter
+	var sorter *Sorter
 
 	arrayzor := algorithmutil.MakeIntegerSlice([]int{3, 2, 8, 1, 4, 6, 5, 9, 7, 0})
 
