@@ -1,0 +1,9 @@
+# folders
+github.com
+golang.org
+gopkg.in
+sourcegraph.com
+
+# console
+main.go
+debug
