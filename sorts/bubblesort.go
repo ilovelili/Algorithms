@@ -1,7 +1,7 @@
 package sort
 
 import (
-	"algorithmutil"
+	"github.com/ilovelili/Algorithms/algorithmutil"
 )
 
 // BubbleSort implements bubble sort algorithm

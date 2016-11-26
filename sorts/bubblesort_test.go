@@ -1,7 +1,7 @@
 package sort
 
 import (
-	"algorithmutil"
+	"github.com/ilovelili/Algorithms/algorithmutil"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
