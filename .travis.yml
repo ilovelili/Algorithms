@@ -16,3 +16,5 @@ install:
   - go get -u -v github.com/cweill/gotests/...
   - go get -u -t github.com/onsi/ginkgo
   - go get -u -t github.com/onsi/gomega
+script:
+  - cd sorts && go test && cd ..
