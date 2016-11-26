@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestSort(t *testing.T) {
+func TestSorts(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Sort Suite")
+	RunSpecs(t, "Sorts Suite")
 }
