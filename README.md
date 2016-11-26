@@ -1,6 +1,6 @@
 # Algorithms
 basic algorithms implemented in Go
-[![Build Status](https://travis-ci.org/ilovelili/Andromeda.svg?branch=master)](https://travis-ci.org/ilovelili/Andromeda/openrtb)
+[![Build Status](https://travis-ci.org/ilovelili/Algorithms.svg?branch=master)](https://travis-ci.org/ilovelili/Algorithms)
 
 ## Sort
 
