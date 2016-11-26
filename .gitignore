@@ -5,5 +5,4 @@ gopkg.in
 sourcegraph.com
 
 # console
-main.go
 debug
