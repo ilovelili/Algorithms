@@ -4,31 +4,39 @@ basic algorithms implemented in Go
 
 ## Sort
 
-### Bubble Sort
-#### Time Complexity
-Best O(n)
-Average O(n^2)
-Worst O(n^2)
-#### Space Complexity
-O(1)
+1. Bubble Sort
+    * Time Complexity
+        * Best O(n)
+        * Average O(n^2)
+        * Worst O(n^2)
+    * Space Complexity
+        * O(1)
 
-### Selection Sort
+2. Selection Sort
 
-### Insertion Sort
-### Heap Sort
-### Merge Sort
-### Quick Sort
+3. Insertion Sort
+4. Heap Sort
+5. Merge Sort
+6. Quick Sort
 
 ## Clustering
 
-### K-means
+1. K-means
 
 ## List Search
 
-### Linear Search
+1. Linear Search
 
-### Binary Search
+2. Binary Search
 
 ## Graph Search
 
+1. Breadth-First Search
 
+2. Depth First Search
+
+3. Bellman-Ford Algorithm
+
+4. Dijkstra's Algorithm
+
+5. A* Algorithm
