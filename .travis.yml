@@ -3,20 +3,8 @@ sudo: false
 go:
   - 1.6
   - 1.7
-install:
-  - go get -u -v github.com/nsf/gocode
-  - go get -u -v github.com/rogpeppe/godef
-  - go get -u -v github.com/golang/lint/golint
-  - go get -u -v github.com/lukehoban/go-outline
-  - go get -u -v sourcegraph.com/sqs/goreturns
-  - go get -u -v golang.org/x/tools/cmd/gorename
-  - go get -u -v github.com/tpng/gopkgs
-  - go get -u -v github.com/newhook/go-symbols
-  - go get -u -v golang.org/x/tools/cmd/guru
-  - go get -u -v github.com/cweill/gotests/...
+install:  
   - go get -u -t github.com/onsi/ginkgo
-  - go get -u -t github.com/onsi/gomega
-  - go get github.com/golang/mock/gomock
-  - go get github.com/golang/mock/mockgen
+  - go get -u -t github.com/onsi/gomega  
 script:
   - cd sort && go test && cd ..
