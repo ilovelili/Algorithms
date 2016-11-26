@@ -1,6 +1,7 @@
+// Package goalgorithms provides basic algorithm and data structure implementations
 package goalgorithms
 
-// BubbleSort Bubble Sort
+// BubbleSort implements bubble sort algorithm
 func BubbleSort(arrayzor []int) []int {
 	swapped := true
 

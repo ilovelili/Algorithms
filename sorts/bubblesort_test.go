@@ -1,3 +1,4 @@
+// Package goalgorithms provides basic algorithm and data structure implementations
 package goalgorithms
 
 import (
