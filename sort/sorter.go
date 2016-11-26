@@ -1,7 +1,7 @@
 package sort
 
 import (
-	"algorithmutil"
+	"github.com/ilovelili/Algorithms/algorithmutil"
 )
 
 // ISorter defines customized sorter interface

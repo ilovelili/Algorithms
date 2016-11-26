@@ -1,9 +1,9 @@
 package algorithm
 
 import (
-	"algorithmutil"
+	"github.com/ilovelili/Algorithms/algorithmutil"
 
-	"sort"
+	"github.com/ilovelili/Algorithms/sort"
 )
 
 var (
