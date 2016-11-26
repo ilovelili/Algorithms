@@ -1,7 +1,7 @@
 package algorithm
 
 import (
-	"algorithmutil"
+	"./algorithmutil"
 
 	"./sort"
 )
