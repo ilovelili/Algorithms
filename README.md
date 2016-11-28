@@ -21,6 +21,13 @@ basic algorithms implemented in Go
         * O(1)
 
 3. Insertion Sort
+    * Time Complexity
+        * Best O(n)
+        * Average O(n^2)
+        * Worst O(n^2)
+    * Space Complexity
+        * O(1)
+
 4. Heap Sort
 5. Merge Sort
 6. Quick Sort
