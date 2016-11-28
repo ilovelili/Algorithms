@@ -1,4 +1,4 @@
-package sort
+package sorts
 
 import (
 	"github.com/ilovelili/Algorithms/algorithmutil"
