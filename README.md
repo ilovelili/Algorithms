@@ -29,7 +29,21 @@ basic algorithms implemented in Go
         * O(1)
 
 4. Heap Sort
+    * Time Complexity
+        * Best O(nlog(n))
+        * Average O(nlog(n))
+        * Worst O(nlog(n))
+    * Space Complexity
+        * O(1)
+
 5. Merge Sort
+    * Time Complexity
+        * Best O(nlog(n))
+        * Average O(nlog(n))
+        * Worst O(nlog(n))
+    * Space Complexity
+        * O(n)
+
 6. Quick Sort
 
 ## Clustering

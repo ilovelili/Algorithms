@@ -1,4 +1,4 @@
-package sorts_test
+package sort_test
 
 import (
 	. "github.com/onsi/ginkgo"
@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestSorts(t *testing.T) {
+func TestSort(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Sorts Suite")
+	RunSpecs(t, "Sort Suite")
 }

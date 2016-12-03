@@ -5,8 +5,6 @@ go:
   - 1.7
 install:  
   - go get -u -t github.com/onsi/ginkgo
-  - go get -u -t github.com/onsi/gomega
-  - go get -u -t github.com/ilovelili/Algorithms/sorts
-  - go get -u -t github.com/ilovelili/Algorithms/algorithmutil
+  - go get -u -t github.com/onsi/gomega  
 script:
   - cd sorts && go test && cd ..

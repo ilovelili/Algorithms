@@ -1,7 +1,7 @@
-package sorts
+package sort
 
 import (
-	"github.com/ilovelili/Algorithms/algorithmutil"
+	"algorithmutil"
 )
 
 // SelectionSort implements selection sort algorithm
