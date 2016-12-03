@@ -7,6 +7,7 @@ install:
   - go get -u -t github.com/onsi/ginkgo
   - go get -u -t github.com/onsi/gomega  
 script:
-  - echo "dir is "$TRAVIS_BUILD_DIR
-  - ln -s $GOPATH/src/github.com/ilovelili/algorithmutil  $TRAVIS_BUILD_DIR/algorithmutil
+  - echo "TRAVIS_BUILD_DIR is "$TRAVIS_BUILD_DIR
+  - cp -r $TRAVIS_BUILD_DIR/algorithmutil $HOME/gopath/src/algorithmutil  
+  - cp -r $TRAVIS_BUILD_DIR/abstract $HOME/gopath/src/abstract
   - cd sort && go test && cd ..
