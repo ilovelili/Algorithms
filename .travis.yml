@@ -7,4 +7,5 @@ install:
   - go get -u -t github.com/onsi/ginkgo
   - go get -u -t github.com/onsi/gomega  
 script:
+  - ln -s $GOPATH/src/github.com/ilovelili/algorithmutil  $TRAVIS_BUILD_DIR/algorithmutil
   - cd sort && go test && cd ..
