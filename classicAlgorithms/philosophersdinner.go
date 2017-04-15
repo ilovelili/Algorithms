@@ -8,7 +8,9 @@ import (
 
 // Philosopher Philosophers eat when have folks in both hands, otherwise they think
 type Philosopher struct {
-	name      string
+	name string
+	// receive chopstick <- true means place the chopstick back on the table
+	// send <-chopstick means grab the chopstick
 	chopstick chan bool
 	neighbor  *Philosopher
 }
@@ -30,17 +32,21 @@ func (phil *Philosopher) eat() {
 }
 
 func (phil *Philosopher) getChopsticks() {
+	// get own chopstick
 	<-phil.chopstick
 	fmt.Printf("%v got his chopstick.\n", phil.name)
-	select {
-	case <-phil.neighbor.chopstick:
-		fmt.Printf("%v got %v's chopstick.\n", phil.name, phil.neighbor.name)
-		fmt.Printf("%v has two chopsticks.\n", phil.name)
-		return
-	case <-time.After(time.Duration(rand.Int63n(1e9))):
-		phil.chopstick <- true
-		phil.think()
-		phil.getChopsticks()
+	for {
+		select {
+		case <-phil.neighbor.chopstick:
+			fmt.Printf("%v got %v's chopstick.\n", phil.name, phil.neighbor.name)
+			fmt.Printf("%v has two chopsticks.\n", phil.name)
+			return
+		case <-time.After(time.Duration(rand.Int63n(1e9))):
+			// place own chopstick back and think...
+			phil.chopstick <- true
+			phil.think()
+			phil.getChopsticks()
+		}
 	}
 }
 
