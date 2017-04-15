@@ -2,3 +2,38 @@ linear (O(n)) > BST (O(log(n))) > Hash Table
 
 BST:
     key in each node must be greater than or equal to any key stored in the left sub-tree, and less than or equal to any key stored in the right sub-tree
+
+
+Self-balancing binary trees solve this problem by performing transformations on the tree (such as tree rotations) at key insertion times, 
+in order to keep the height proportional to log2(n). Although a certain overhead is involved, it may be justified in the long run by ensuring fast execution of later operations.
+
+https://en.wikipedia.org/wiki/Associative_array#Hash_table_implementations
+Hash table implementations[edit]
+The most frequently used general purpose implementation of an associative array is with a hash table: an array combined with a hash function that separates each key into a separate "bucket" of the array. The basic idea behind a hash table is that accessing an element of an array via its index is a simple, constant-time operation. Therefore, the average overhead of an operation for a hash table is only the computation of the key's hash, combined with accessing the corresponding bucket within the array. As such, hash tables usually perform in O(1) time, and outperform alternatives in most situations.
+
+Hash tables need to be able to handle collisions: when the hash function maps two different keys to the same bucket of the array. The two most widespread approaches to this problem are separate chaining and open addressing.[1][2][4][9] In separate chaining, the array does not store the value itself but stores a pointer to another container, usually an association list, that stores all of the values matching the hash. On the other hand, in open addressing, if a hash collision is found, then the table seeks an empty spot in an array to store the value in a deterministic manner, usually by looking at the next immediate position in the array.
+
+
+This graph compares the average number of cache misses required to look up elements in tables with separate chaining and open addressing.
+Open addressing has a lower cache miss ratio than separate chaining when the table is mostly empty. However, as the table becomes filled with more elements, open addressing's performance degrades exponentially. Additionally, separate chaining uses less memory in most cases, unless the entries are very small (less than four times the size of a pointer).
+
+Tree implementations[edit]
+Main article: Search tree
+Self-balancing binary search trees[edit]
+Another common approach is to implement an associative array with a self-balancing binary search tree, such as an AVL tree or a red-black tree.[10]
+
+Compared to hash tables, these structures have both advantages and weaknesses. The worst-case performance of self-balancing binary search trees is significantly better than that of a hash table, with a time complexity in big O notation of O(log n). This is in contrast to hash tables, whose worst-case performance involves all elements sharing a single bucket, resulting in O(n) time complexity. In addition, and like all binary search trees, self-balancing binary search trees keep their elements in order. Thus, traversing its elements follows a least-to-greatest pattern, whereas traversing a hash table can result in elements being in seemingly random order. However, hash tables have a much better average-case time complexity than self-balancing binary search trees of O(1), and their worst-case performance is highly unlikely when a good hash function is used.
+
+It is worth noting that a self-balancing binary search tree can be used to implement the buckets for a hash table that uses separate chaining. This allows for average-case constant lookup, but assures a worst-case performance of O(log n). However, this introduces extra complexity into the implementation, and may cause even worse performance for smaller hash tables, where the time spent inserting into and balancing the tree is greater than the time needed to perform a linear search on all of the elements of a linked list or similar data structure.[11][12]
+
+Other trees[edit]
+Associative arrays may also be stored in unbalanced binary search trees or in data structures specialized to a particular type of keys such as radix trees, tries, Judy arrays, or van Emde Boas trees, but these implementation methods are less efficient than hash tables[citation needed] as well as placing greater restrictions on the types of data that they can handle. The advantages of these alternative structures come from their ability to handle operations beyond the basic ones of an associative array, such as finding the binding whose key is the closest to a queried key, when the query is not itself present in the set of bindings.
+
+Comparison[edit]
+Underlying data structure	Lookup	Insertion	Deletion	Ordered
+average	worst case	average	worst case	average	worst case
+Hash table	O(1)	O(n)	O(1)	O(n)	O(1)	O(n)	No
+Self-balancing binary search tree	O(log n)	O(log n)	O(log n)	O(log n)	O(log n)	O(log n)	Yes
+unbalanced binary search tree	O(log n)	O(n)	O(log n)	O(n)	O(log n)	O(n)	Yes
+Sequential container of key-value pairs
+(e.g. association list)	O(n)	O(n)	O(1)	O(1)	O(n)	O(n)	No
