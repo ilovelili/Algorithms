@@ -13,7 +13,7 @@ func main() {
 	// fmt.Printf("distance is %d\n", distance)
 	// fmt.Println(ops)
 
-	arr := []int{3, 2, 5, 1, 9, 8, 7, 4, 6}
-	fmt.Println(mysort.InsertionSort(arr))
-	fmt.Println(mysort.SelectionSort(arr))
+	fmt.Println(mysort.InsertionSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
+	fmt.Println(mysort.SelectionSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
+	fmt.Println(mysort.HeapSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
 }
