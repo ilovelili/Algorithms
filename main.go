@@ -16,4 +16,5 @@ func main() {
 	fmt.Println(mysort.InsertionSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
 	fmt.Println(mysort.SelectionSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
 	fmt.Println(mysort.HeapSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
+	fmt.Println(mysort.QuickSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
 }
