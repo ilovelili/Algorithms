@@ -2,6 +2,8 @@ package mysort
 
 import "math/rand"
 
+// Best (n log(n))	Avg Θ(n log(n)) Worst O(n^2) Space O(n)
+
 // QuickSort quick sort
 func QuickSort(arr []int) []int {
 	length := len(arr)

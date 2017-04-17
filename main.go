@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"mysort"
+	"search"
 )
 
 func main() {
@@ -17,4 +18,7 @@ func main() {
 	fmt.Println(mysort.SelectionSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
 	fmt.Println(mysort.HeapSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
 	fmt.Println(mysort.QuickSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
+	fmt.Println(mysort.BubbleSort([]int{3, 2, 5, 1, 9, 8, 7, 4, 6}))
+
+	fmt.Println(search.BinarySearch([]int{1, 3, 5, 6, 7}, 6))
 }
